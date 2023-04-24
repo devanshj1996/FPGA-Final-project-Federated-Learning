@@ -1,0 +1,85 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/nethome/djohri7/FPGA/Final_Project/bkup/script.tcl:25:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=tiled_conv" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="tiled_conv.cpp:37:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=input_feature_map bundle=fm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="tiled_conv.cpp:38:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=layer_weights bundle=wt" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="tiled_conv.cpp:39:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=linear_weights bundle=wt" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="tiled_conv.cpp:40:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="m_axi depth=1 port=output_feature_map bundle=fm" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="tiled_conv.cpp:42:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="tiled_conv" ARG_PragmaIsValid="1" ARG_PragmaOptions="s_axilite register port=return" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:724:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="and_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:738:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="or_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/tools/software/xilinx/Vitis_HLS/2022.1/common/technology/autopilot/ap_int_ref.h:752:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="xor_reduce" ARG_PragmaIsValid="1" ARG_PragmaType="unroll" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="conv_7x7.cpp:88:0" msg_body="Inlining function 'pseudo_random(unsigned int, int)' into 'quarter_drop(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3])'">
+        <args Callee="pseudo_random(unsigned int, int)" Caller="quarter_drop(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3])"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'load_input_tile_block_from_DRAM(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10][10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], int, int)' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="load_input_tile_block_from_DRAM(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10][10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], int, int)" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'load_layer_params_from_DRAM(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], int)' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="load_layer_params_from_DRAM(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], int)" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'conv_5x5(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [6][6], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10][10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5])' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="conv_5x5(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [6][6], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10][10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5])" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'max_pool(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [6][6], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3], int)' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="max_pool(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [6][6], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3], int)" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'quarter_drop(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3])' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="quarter_drop(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3])" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'store_output_tile_to_DRAM(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [12][12], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3], int, int, int)' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="store_output_tile_to_DRAM(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [12][12], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [3][3], int, int, int)" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INLINE" msg_id="214-178" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Inlining function 'linear_layer(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)' into 'tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)'">
+        <args Callee="linear_layer(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*, ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)" Caller="tiled_conv(ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [28][28], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [1][5][5], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt; (*) [10], ap_fixed&lt;16, 3, (ap_q_mode)5, (ap_o_mode)3, 0&gt;*)"/>
+    </msg>
+    <msg msg_groups="CODE_UNSUPPORTED" msg_id="214-167" msg_severity="WARNING" msg_loc="tiled_conv.cpp:97:48" msg_body="The program may have out of bound array access"/>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Aggregating maxi variable 'output_feature_map' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="output_feature_map"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Aggregating maxi variable 'linear_weights' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="linear_weights"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Aggregating maxi variable 'layer_weights' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="layer_weights"/>
+    </msg>
+    <msg msg_groups="PRAGMA_AGGREGATE" msg_id="214-241" msg_severity="INFO" msg_loc="tiled_conv.cpp:26:0" msg_body="Aggregating maxi variable 'input_feature_map' with compact=none mode in 16-bits">
+        <args AggregateTypeName="compact=none" Bitwidth="16" HwTyName="maxi" Name="input_feature_map"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+
