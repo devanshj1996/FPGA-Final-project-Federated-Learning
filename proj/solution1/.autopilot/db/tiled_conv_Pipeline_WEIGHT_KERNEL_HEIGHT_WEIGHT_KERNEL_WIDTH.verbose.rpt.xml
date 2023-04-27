@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vitis HLS Report for 'tiled_conv_Pipeline_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH'" level="0">
-<item name = "Date">Tue Apr 18 17:01:44 2023
+<item name = "Date">Thu Apr 27 10:52:41 2023
 </item>
 <item name = "Version">2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)</item>
 <item name = "Project">proj</item>
@@ -78,16 +78,16 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="add_ln115_1_fu_132_p2">+, 0, 0, 13, 5, 1</column>
-<column name="add_ln115_fu_149_p2">+, 0, 0, 11, 3, 1</column>
-<column name="add_ln118_fu_177_p2">+, 0, 0, 11, 3, 1</column>
-<column name="add_ln120_1_fu_212_p2">+, 0, 0, 7, 5, 5</column>
-<column name="add_ln120_fu_203_p2">+, 0, 0, 7, 5, 5</column>
+<column name="add_ln118_1_fu_132_p2">+, 0, 0, 13, 5, 1</column>
+<column name="add_ln118_fu_149_p2">+, 0, 0, 11, 3, 1</column>
+<column name="add_ln121_fu_177_p2">+, 0, 0, 11, 3, 1</column>
+<column name="add_ln123_1_fu_212_p2">+, 0, 0, 7, 5, 5</column>
+<column name="add_ln123_fu_203_p2">+, 0, 0, 7, 5, 5</column>
 <column name="ap_block_pp0_stage0_11001">and, 0, 0, 2, 1, 1</column>
-<column name="icmp_ln115_fu_126_p2">icmp, 0, 0, 9, 5, 4</column>
-<column name="icmp_ln118_fu_155_p2">icmp, 0, 0, 8, 3, 3</column>
-<column name="select_ln115_1_fu_169_p3">select, 0, 0, 3, 1, 3</column>
-<column name="select_ln115_fu_161_p3">select, 0, 0, 3, 1, 1</column>
+<column name="icmp_ln118_fu_126_p2">icmp, 0, 0, 9, 5, 4</column>
+<column name="icmp_ln121_fu_155_p2">icmp, 0, 0, 8, 3, 3</column>
+<column name="select_ln118_1_fu_169_p3">select, 0, 0, 3, 1, 3</column>
+<column name="select_ln118_fu_161_p3">select, 0, 0, 3, 1, 1</column>
 <column name="ap_enable_pp0">xor, 0, 0, 2, 1, 2</column>
 </table>
 </item>
@@ -112,8 +112,8 @@
 <column name="indvar_flatten6_fu_70">5, 0, 5, 0</column>
 <column name="kh_fu_66">3, 0, 3, 0</column>
 <column name="kw_fu_62">3, 0, 3, 0</column>
-<column name="select_ln115_1_reg_258">3, 0, 3, 0</column>
-<column name="select_ln115_reg_253">3, 0, 3, 0</column>
+<column name="select_ln118_1_reg_258">3, 0, 3, 0</column>
+<column name="select_ln118_reg_253">3, 0, 3, 0</column>
 <column name="wt_addr_read_reg_264">16, 0, 16, 0</column>
 </table>
 </item>
@@ -176,7 +176,7 @@
 <column name="m_axi_wt_BRESP">in, 2, m_axi, wt, pointer</column>
 <column name="m_axi_wt_BID">in, 1, m_axi, wt, pointer</column>
 <column name="m_axi_wt_BUSER">in, 1, m_axi, wt, pointer</column>
-<column name="sext_ln115">in, 63, ap_none, sext_ln115, scalar</column>
+<column name="sext_ln118">in, 63, ap_none, sext_ln118, scalar</column>
 <column name="conv_wt_buf_V_0_0_address0">out, 5, ap_memory, conv_wt_buf_V_0_0, array</column>
 <column name="conv_wt_buf_V_0_0_ce0">out, 1, ap_memory, conv_wt_buf_V_0_0, array</column>
 <column name="conv_wt_buf_V_0_0_we0">out, 1, ap_memory, conv_wt_buf_V_0_0, array</column>

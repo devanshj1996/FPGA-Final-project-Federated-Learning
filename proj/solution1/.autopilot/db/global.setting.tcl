@@ -44,7 +44,7 @@ set SCTraceOption all
 set TargetInfo xc7z020:-clg400:-1
 set SourceFiles {sc {} c {../../tiled_conv.cpp ../../conv_7x7.cpp ../../utils.cpp}}
 set SourceFlags {sc {} c {{} {} {}}}
-set DirectiveFile /nethome/djohri7/FPGA/Final_Project/bkup/proj/solution1/solution1.directive
+set DirectiveFile /nethome/djohri7/FPGA/Final_Project/proj/solution1/solution1.directive
 set TBFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}
 set SpecLanguage C
 set TVInFiles {bc {} c {} sc {} cas {} vhdl {} verilog {}}

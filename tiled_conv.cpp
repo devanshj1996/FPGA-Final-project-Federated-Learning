@@ -9,6 +9,9 @@
 // Note: Do not use pragmas other than the existing ones in Part B.
 ///////////////////////////////////////////////////////////////////////////////
 #include "utils.h"
+#include <iostream>
+
+using namespace std;
 
 /*void tiled_conv(
     fm_t input_feature_map[IN_FM_DEPTH][IN_FM_HEIGHT][IN_FM_WIDTH],
@@ -58,6 +61,14 @@ void tiled_conv(
     fm_t layer1_output[OUT_MAX_POOL_FM_DEPTH][OUT_MAX_POOL_FM_HEIGHT][OUT_MAX_POOL_FM_WIDTH];
     fm_t linear_input[OUT_MAX_POOL_FM_DEPTH * OUT_MAX_POOL_FM_HEIGHT * OUT_MAX_POOL_FM_WIDTH];
     
+    /*for (int i = 0; i < IN_FM_DEPTH; i++) {
+        for (int j = 0; j < IN_FM_HEIGHT; j++) {
+            for (int k = 0; k < IN_FM_WIDTH; k++) {
+                std::cout << input_feature_map[i][j][k] << ", " ;
+            }
+            std::cout << std::endl;
+        }
+    }*/ 
     //--------------------------------------------------------------------------
     // Process each tile iteratively
     //--------------------------------------------------------------------------
@@ -80,24 +91,76 @@ void tiled_conv(
             //       for processing.
             //--------------------------------------------------------------------------
             load_input_tile_block_from_DRAM(conv_in_buf, input_feature_map, ti, tj);
+
+    /*for (int i = 0; i < IN_BUF_DEPTH; i++) {
+        for (int j = 0; j < IN_BUF_HEIGHT; j++) {
+            for (int k = 0; k < IN_BUF_WIDTH; k++) {
+                std::cout << conv_in_buf[i][j][k] << ", " ;
+            }
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;*/  
             for (int i = 0; i < OUT_CONV_FM_DEPTH / OUT_BUF_DEPTH; i++) { 
                 //load_layer_params_from_DRAM(conv_wt_buf, conv_bias_buf, layer_weights, layer_bias, i);
                 load_layer_params_from_DRAM(conv_wt_buf, layer_weights, i);
-                //conv_7x7(conv_out_buf, conv_in_buf, conv_wt_buf, conv_bias_buf);
-                conv_5x5(conv_out_buf, conv_in_buf, conv_wt_buf);
-                max_pool(conv_out_buf, max_pool_out_buf, POOL_DIM);
-                quarter_drop(max_pool_out_buf);
-                store_output_tile_to_DRAM(layer1_output, max_pool_out_buf, ti, tj, i);
-            }
-        }
-
-        for (int tp = 0; tp < OUT_MAX_POOL_BUF_HEIGHT; tp++) {
-            int row_no = ti * OUT_MAX_POOL_BUF_HEIGHT + tp;
-            for (int tj = 0; tj < OUT_MAX_POOL_FM_WIDTH; tj++) {
-                linear_input[row_no * OUT_MAX_POOL_FM_WIDTH + tj] = layer1_output[OUT_MAX_POOL_FM_DEPTH][row_no][tj];
+    /*for (int i = 0; i < OUT_BUF_DEPTH; i++) {
+        for (int j = 0; j < IN_BUF_DEPTH; j++) {
+            for (int k = 0; k < KERNEL_HEIGHT; k++) {
+                for (int p = 0; p < KERNEL_WIDTH; p++) {
+                    std::cout << conv_wt_buf[i][j][k][p] << ", " ;
+                }
+                std::cout << std::endl;
             }
         }
     }
+    std::cout << std::endl;*/  
+                //conv_7x7(conv_out_buf, conv_in_buf, conv_wt_buf, conv_bias_buf);
+                conv_5x5(conv_out_buf, conv_in_buf, conv_wt_buf);
+    /*for (int i = 0; i < OUT_BUF_DEPTH; i++) {
+        for (int j = 0; j < OUT_BUF_HEIGHT; j++) {
+            for (int k = 0; k < OUT_BUF_WIDTH; k++) {
+                std::cout << conv_out_buf[i][j][k] << ", " ;
+            }
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;*/  
+                max_pool(conv_out_buf, max_pool_out_buf, POOL_DIM);
+    /*for (int i = 0; i < OUT_MAX_POOL_BUF_DEPTH; i++) {
+        for (int j = 0; j < OUT_MAX_POOL_BUF_HEIGHT; j++) {
+            for (int k = 0; k < OUT_MAX_POOL_BUF_WIDTH; k++) {
+                std::cout << max_pool_out_buf[i][j][k] << ", " ;
+            }
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;*/  
+            //    quarter_drop(max_pool_out_buf);
+                store_output_tile_to_DRAM(layer1_output, max_pool_out_buf, ti, tj, i);
+    /*for (int i = 0; i < OUT_MAX_POOL_BUF_DEPTH; i++) {
+        for (int j = 0; j < OUT_MAX_POOL_BUF_HEIGHT; j++) {
+            for (int k = 0; k < OUT_MAX_POOL_BUF_WIDTH; k++) {
+                std::cout << layer1_output[i][j][k] << ", " ;
+            }
+            std::cout << std::endl;
+        }
+    }
+    std::cout << std::endl;*/  
+            }
+        }
 
+        for (int td = 0; td < OUT_MAX_POOL_BUF_DEPTH; td++) {
+            for (int tp = 0; tp < OUT_MAX_POOL_BUF_HEIGHT; tp++) {
+                int row_no = ti * OUT_MAX_POOL_BUF_HEIGHT + tp;
+                for (int tj = 0; tj < OUT_MAX_POOL_FM_WIDTH; tj++) {
+                    linear_input[row_no * OUT_MAX_POOL_FM_WIDTH + tj] = layer1_output[td][row_no][tj];
+            	    //cout<<layer1_output[td][row_no][tj]<< endl;
+                }
+	    }
+        }
+    }
+
+    cout<<"\nOutput feature map:"<<endl;
     linear_layer(linear_input, linear_weights, output_feature_map);
 }

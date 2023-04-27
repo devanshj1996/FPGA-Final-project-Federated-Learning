@@ -129,8 +129,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>trunc_ln38_2</name>
-<Object>trunc_ln38_2</Object>
+<name>trunc_ln41_2</name>
+<Object>trunc_ln41_2</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -173,8 +173,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sub_ln181</name>
-<Object>sub_ln181</Object>
+<name>sub_ln184</name>
+<Object>sub_ln184</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>
@@ -184,8 +184,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>layer1_output_V_address0</name>
-<Object>layer1_output_V</Object>
+<name>layer1_output_V_0_address0</name>
+<Object>layer1_output_V_0</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -195,8 +195,8 @@
 <Attribute>address</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>layer1_output_V_ce0</name>
-<Object>layer1_output_V</Object>
+<name>layer1_output_V_0_ce0</name>
+<Object>layer1_output_V_0</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -206,8 +206,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>layer1_output_V_we0</name>
-<Object>layer1_output_V</Object>
+<name>layer1_output_V_0_we0</name>
+<Object>layer1_output_V_0</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>
@@ -217,8 +217,8 @@
 <Attribute>control</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>layer1_output_V_d0</name>
-<Object>layer1_output_V</Object>
+<name>layer1_output_V_0_d0</name>
+<Object>layer1_output_V_0</Object>
 <Type>array</Type>
 <Scope></Scope>
 <IOProtocol>ap_memory</IOProtocol>

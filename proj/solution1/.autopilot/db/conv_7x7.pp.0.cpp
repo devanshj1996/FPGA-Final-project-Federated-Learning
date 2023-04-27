@@ -33818,6 +33818,9 @@ void linear_layer(
 # 9 "conv_7x7.cpp" 2
 
 
+using namespace std;
+
+
 
 
 
@@ -33829,17 +33832,17 @@ void conv_5x5(
     wt_t W_buf[1][1][5][5]
 )
 {
-# 35 "conv_7x7.cpp"
-    VITIS_LOOP_35_1: for (int feature = 0; feature < 1; feature++) {
+# 38 "conv_7x7.cpp"
+    VITIS_LOOP_38_1: for (int feature = 0; feature < 1; feature++) {
 
-        VITIS_LOOP_37_2: for (int i = 0; i < 6; i++) {
+        VITIS_LOOP_40_2: for (int i = 0; i < 6; i++) {
 
-            VITIS_LOOP_39_3: for (int j = 0; j < 6; j++) {
+            VITIS_LOOP_42_3: for (int j = 0; j < 6; j++) {
                 fm_t tmp = 0;
-                VITIS_LOOP_41_4: for (int k = 0; k < 1; k++) {
-                    VITIS_LOOP_42_5: for (int weight_row = 0; weight_row < 5; weight_row++) {
+                VITIS_LOOP_44_4: for (int k = 0; k < 1; k++) {
+                    VITIS_LOOP_45_5: for (int weight_row = 0; weight_row < 5; weight_row++) {
                         int row = i + weight_row;
-                        VITIS_LOOP_44_6: for (int weight_column = 0; weight_column < 5; weight_column++) {
+                        VITIS_LOOP_47_6: for (int weight_column = 0; weight_column < 5; weight_column++) {
                             int column = j + weight_column;
                             tmp += W_buf[feature][k][weight_row][weight_column] * X_buf[k][row][column];
                         }
@@ -33851,6 +33854,7 @@ void conv_5x5(
 
 
                 Y_buf[feature][i][j] = (tmp > 0) ? (tmp) : (fm_t) 0;
+
             }
         }
     }
@@ -33863,18 +33867,19 @@ void max_pool(
 )
 {
 
-    VITIS_LOOP_68_1: for (int depth = 0; depth < 1; depth++) {
-        VITIS_LOOP_69_2: for (int i = 0; i < 3; i++) {
-            VITIS_LOOP_70_3: for (int j = 0; j < 3; j++) {
+    VITIS_LOOP_72_1: for (int depth = 0; depth < 1; depth++) {
+        VITIS_LOOP_73_2: for (int i = 0; i < 3; i++) {
+            VITIS_LOOP_74_3: for (int j = 0; j < 3; j++) {
                 fm_t max = -1;
-                VITIS_LOOP_72_4: for (int ii = 0; ii < dim; ii++) {
+                VITIS_LOOP_76_4: for (int ii = 0; ii < dim; ii++) {
                     int row = i * dim + ii;
-                    VITIS_LOOP_74_5: for (int jj = 0; jj < dim; jj++) {
+                    VITIS_LOOP_78_5: for (int jj = 0; jj < dim; jj++) {
                         int col = j * dim + jj;
                         max = (conv_in_buf[depth][row][col] > max) ? conv_in_buf[depth][row][col] : max;
                     }
                 }
                 max_pool_out_buf[depth][i][j] = max;
+
             }
         }
     }
@@ -33886,13 +33891,14 @@ void quarter_drop(
 {
 
 
-    VITIS_LOOP_91_1: for (int depth = 0; depth < 1; depth++) {
-        VITIS_LOOP_92_2: for (int i = 0; i < 3; i++) {
-            VITIS_LOOP_93_3: for (int j = 0; j < 3; j++) {
+    VITIS_LOOP_96_1: for (int depth = 0; depth < 1; depth++) {
+        VITIS_LOOP_97_2: for (int i = 0; i < 3; i++) {
+            VITIS_LOOP_98_3: for (int j = 0; j < 3; j++) {
                 int rand_no = pseudo_random(31, (depth * 1 + i * 3 + j * 3));
                 if (!(rand_no % 4)) {
                     max_pool_out_buf[depth][i][j] = 0;
                 }
+
             }
         }
     }
@@ -33904,9 +33910,9 @@ void linear_layer(
     fm_t output_feature_map[10]
 )
 {
-    VITIS_LOOP_109_1: for (int i = 0; i < 10; i++) {
+    VITIS_LOOP_115_1: for (int i = 0; i < 10; i++) {
         fm_t temp = 0;
-        VITIS_LOOP_111_2: for (int j = 0; j < 144; j++) {
+        VITIS_LOOP_117_2: for (int j = 0; j < 144; j++) {
             temp += linear_input[j] * linear_weights[j][i];
         }
         output_feature_map[i] = temp;

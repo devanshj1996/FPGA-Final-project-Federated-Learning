@@ -14,12 +14,12 @@ set C_modelName {tiled_conv_Pipeline_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH}
 set C_modelType { void 0 }
 set C_modelArgList {
 	{ wt int 16 regular {axi_master 0}  }
-	{ sext_ln115 int 63 regular  }
+	{ sext_ln118 int 63 regular  }
 	{ conv_wt_buf_V_0_0 int 16 regular {array 25 { 0 3 } 0 1 }  }
 }
 set C_modelArgMapList {[ 
 	{ "Name" : "wt", "interface" : "axi_master", "bitwidth" : 16, "direction" : "READONLY", "bitSlice":[ {"cElement": [{"cName": "layer_weights","offset": { "type": "dynamic","port_name": "layer_weights","bundle": "control"},"direction": "READONLY"},{"cName": "linear_weights","offset": { "type": "dynamic","port_name": "linear_weights","bundle": "control"},"direction": "READONLY"}]}]} , 
- 	{ "Name" : "sext_ln115", "interface" : "wire", "bitwidth" : 63, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln118", "interface" : "wire", "bitwidth" : 63, "direction" : "READONLY"} , 
  	{ "Name" : "conv_wt_buf_V_0_0", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY"} ]}
 # RTL Port declarations: 
 set portNum 57
@@ -76,7 +76,7 @@ set portList {
 	{ m_axi_wt_BRESP sc_in sc_lv 2 signal 0 } 
 	{ m_axi_wt_BID sc_in sc_lv 1 signal 0 } 
 	{ m_axi_wt_BUSER sc_in sc_lv 1 signal 0 } 
-	{ sext_ln115 sc_in sc_lv 63 signal 1 } 
+	{ sext_ln118 sc_in sc_lv 63 signal 1 } 
 	{ conv_wt_buf_V_0_0_address0 sc_out sc_lv 5 signal 2 } 
 	{ conv_wt_buf_V_0_0_ce0 sc_out sc_logic 1 signal 2 } 
 	{ conv_wt_buf_V_0_0_we0 sc_out sc_logic 1 signal 2 } 
@@ -135,7 +135,7 @@ set NewPortList {[
  	{ "name": "m_axi_wt_BRESP", "direction": "in", "datatype": "sc_lv", "bitwidth":2, "type": "signal", "bundle":{"name": "wt", "role": "BRESP" }} , 
  	{ "name": "m_axi_wt_BID", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "wt", "role": "BID" }} , 
  	{ "name": "m_axi_wt_BUSER", "direction": "in", "datatype": "sc_lv", "bitwidth":1, "type": "signal", "bundle":{"name": "wt", "role": "BUSER" }} , 
- 	{ "name": "sext_ln115", "direction": "in", "datatype": "sc_lv", "bitwidth":63, "type": "signal", "bundle":{"name": "sext_ln115", "role": "default" }} , 
+ 	{ "name": "sext_ln118", "direction": "in", "datatype": "sc_lv", "bitwidth":63, "type": "signal", "bundle":{"name": "sext_ln118", "role": "default" }} , 
  	{ "name": "conv_wt_buf_V_0_0_address0", "direction": "out", "datatype": "sc_lv", "bitwidth":5, "type": "signal", "bundle":{"name": "conv_wt_buf_V_0_0", "role": "address0" }} , 
  	{ "name": "conv_wt_buf_V_0_0_ce0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv_wt_buf_V_0_0", "role": "ce0" }} , 
  	{ "name": "conv_wt_buf_V_0_0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv_wt_buf_V_0_0", "role": "we0" }} , 
@@ -160,7 +160,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "wt", "Type" : "MAXI", "Direction" : "I",
 				"BlockSignal" : [
 					{"Name" : "wt_blk_n_R", "Type" : "RtlSignal"}]},
-			{"Name" : "sext_ln115", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln118", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv_wt_buf_V_0_0", "Type" : "Memory", "Direction" : "O"}],
 		"Loop" : [
 			{"Name" : "WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH", "PipelineType" : "UPC",
@@ -171,7 +171,7 @@ set RtlHierarchyInfo {[
 set ArgLastReadFirstWriteLatency {
 	tiled_conv_Pipeline_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH {
 		wt {Type I LastRead 1 FirstWrite -1}
-		sext_ln115 {Type I LastRead 0 FirstWrite -1}
+		sext_ln118 {Type I LastRead 0 FirstWrite -1}
 		conv_wt_buf_V_0_0 {Type O LastRead -1 FirstWrite 2}}}
 
 set hasDtUnsupportedChannel 0
@@ -187,6 +187,6 @@ set PipelineEnableSignalInfo {[
 
 set Spec2ImplPortList { 
 	 { m_axi {  { m_axi_wt_AWVALID VALID 1 1 }  { m_axi_wt_AWREADY READY 0 1 }  { m_axi_wt_AWADDR ADDR 1 64 }  { m_axi_wt_AWID ID 1 1 }  { m_axi_wt_AWLEN SIZE 1 32 }  { m_axi_wt_AWSIZE BURST 1 3 }  { m_axi_wt_AWBURST LOCK 1 2 }  { m_axi_wt_AWLOCK CACHE 1 2 }  { m_axi_wt_AWCACHE PROT 1 4 }  { m_axi_wt_AWPROT QOS 1 3 }  { m_axi_wt_AWQOS REGION 1 4 }  { m_axi_wt_AWREGION USER 1 4 }  { m_axi_wt_AWUSER DATA 1 1 }  { m_axi_wt_WVALID VALID 1 1 }  { m_axi_wt_WREADY READY 0 1 }  { m_axi_wt_WDATA FIFONUM 1 16 }  { m_axi_wt_WSTRB STRB 1 2 }  { m_axi_wt_WLAST LAST 1 1 }  { m_axi_wt_WID ID 1 1 }  { m_axi_wt_WUSER DATA 1 1 }  { m_axi_wt_ARVALID VALID 1 1 }  { m_axi_wt_ARREADY READY 0 1 }  { m_axi_wt_ARADDR ADDR 1 64 }  { m_axi_wt_ARID ID 1 1 }  { m_axi_wt_ARLEN SIZE 1 32 }  { m_axi_wt_ARSIZE BURST 1 3 }  { m_axi_wt_ARBURST LOCK 1 2 }  { m_axi_wt_ARLOCK CACHE 1 2 }  { m_axi_wt_ARCACHE PROT 1 4 }  { m_axi_wt_ARPROT QOS 1 3 }  { m_axi_wt_ARQOS REGION 1 4 }  { m_axi_wt_ARREGION USER 1 4 }  { m_axi_wt_ARUSER DATA 1 1 }  { m_axi_wt_RVALID VALID 0 1 }  { m_axi_wt_RREADY READY 1 1 }  { m_axi_wt_RDATA FIFONUM 0 16 }  { m_axi_wt_RLAST LAST 0 1 }  { m_axi_wt_RID ID 0 1 }  { m_axi_wt_RFIFONUM LEN 0 10 }  { m_axi_wt_RUSER DATA 0 1 }  { m_axi_wt_RRESP RESP 0 2 }  { m_axi_wt_BVALID VALID 0 1 }  { m_axi_wt_BREADY READY 1 1 }  { m_axi_wt_BRESP RESP 0 2 }  { m_axi_wt_BID ID 0 1 }  { m_axi_wt_BUSER DATA 0 1 } } }
-	sext_ln115 { ap_none {  { sext_ln115 in_data 0 63 } } }
+	sext_ln118 { ap_none {  { sext_ln118 in_data 0 63 } } }
 	conv_wt_buf_V_0_0 { ap_memory {  { conv_wt_buf_V_0_0_address0 mem_address 1 5 }  { conv_wt_buf_V_0_0_ce0 mem_ce 1 1 }  { conv_wt_buf_V_0_0_we0 mem_we 1 1 }  { conv_wt_buf_V_0_0_d0 mem_din 1 16 } } }
 }

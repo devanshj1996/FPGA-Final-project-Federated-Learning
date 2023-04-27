@@ -33812,12 +33812,8 @@ void linear_layer(
 # 12 "tiled_conv.cpp" 2
 
 
-
-
-
-
-
-
+using namespace std;
+# 23 "tiled_conv.cpp"
 __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
     fm_t input_feature_map[1][28][28],
     wt_t layer_weights[1][1][5][5],
@@ -33825,18 +33821,18 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
     fm_t output_feature_map[10]
 )
 {
-#line 25 "/nethome/djohri7/FPGA/Final_Project/bkup/script.tcl"
+#line 25 "/nethome/djohri7/FPGA/Final_Project/script.tcl"
 #pragma HLSDIRECTIVE TOP name=tiled_conv
-# 26 "tiled_conv.cpp"
+# 29 "tiled_conv.cpp"
 
-# 37 "tiled_conv.cpp"
+# 40 "tiled_conv.cpp"
 #pragma HLS INTERFACE m_axi depth=1 port=input_feature_map bundle=fm
 #pragma HLS INTERFACE m_axi depth=1 port=layer_weights bundle=wt
 #pragma HLS INTERFACE m_axi depth=1 port=linear_weights bundle=wt
 #pragma HLS INTERFACE m_axi depth=1 port=output_feature_map bundle=fm
 
 #pragma HLS INTERFACE s_axilite register port=return
-# 53 "tiled_conv.cpp"
+# 56 "tiled_conv.cpp"
  fm_t conv_in_buf[1][6 + 4][6 + 4];
     wt_t conv_wt_buf[1][1][5][5];
     fm_t conv_out_buf[1][6 / 1][6 / 1] = { 0 };
@@ -33844,10 +33840,7 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
     fm_t max_pool_out_buf[1][3][3];
     fm_t layer1_output[1][12][12];
     fm_t linear_input[1 * 12 * 12];
-
-
-
-
+# 75 "tiled_conv.cpp"
     TILE_ROW:
     for(int ti = 0; ti < (int) 24 / 6; ti++)
     {
@@ -33856,26 +33849,33 @@ __attribute__((sdx_kernel("tiled_conv", 0))) void tiled_conv(
         {
             std::cout << "Processing Tile " << ti * (int) 24 / 6 + tj + 1;
             std::cout << "/" << (int) 24 / 6 * (int) 24 / 6 << std::endl;
-# 82 "tiled_conv.cpp"
+# 93 "tiled_conv.cpp"
             load_input_tile_block_from_DRAM(conv_in_buf, input_feature_map, ti, tj);
-            VITIS_LOOP_83_1: for (int i = 0; i < 1 / 1; i++) {
+# 104 "tiled_conv.cpp"
+            VITIS_LOOP_104_1: for (int i = 0; i < 1 / 1; i++) {
 
                 load_layer_params_from_DRAM(conv_wt_buf, layer_weights, i);
-
+# 119 "tiled_conv.cpp"
                 conv_5x5(conv_out_buf, conv_in_buf, conv_wt_buf);
+# 129 "tiled_conv.cpp"
                 max_pool(conv_out_buf, max_pool_out_buf, 2);
-                quarter_drop(max_pool_out_buf);
+# 140 "tiled_conv.cpp"
                 store_output_tile_to_DRAM(layer1_output, max_pool_out_buf, ti, tj, i);
+# 150 "tiled_conv.cpp"
             }
         }
 
-        VITIS_LOOP_94_2: for (int tp = 0; tp < 3; tp++) {
-            int row_no = ti * 3 + tp;
-            VITIS_LOOP_96_3: for (int tj = 0; tj < 12; tj++) {
-                linear_input[row_no * 12 + tj] = layer1_output[1][row_no][tj];
-            }
+        VITIS_LOOP_153_2: for (int td = 0; td < 1; td++) {
+            VITIS_LOOP_154_3: for (int tp = 0; tp < 3; tp++) {
+                int row_no = ti * 3 + tp;
+                VITIS_LOOP_156_4: for (int tj = 0; tj < 12; tj++) {
+                    linear_input[row_no * 12 + tj] = layer1_output[td][row_no][tj];
+
+                }
+     }
         }
     }
 
+    cout<<"\nOutput feature map:"<<endl;
     linear_layer(linear_input, linear_weights, output_feature_map);
 }

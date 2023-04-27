@@ -1,4 +1,4 @@
-; ModuleID = '/nethome/djohri7/FPGA/Final_Project/bkup/proj/solution1/.autopilot/db/a.g.ld.5.gdce.bc'
+; ModuleID = '/nethome/djohri7/FPGA/Final_Project/proj/solution1/.autopilot/db/a.g.ld.5.gdce.bc'
 source_filename = "llvm-link"
 target datalayout = "e-m:e-i64:64-i128:128-i256:256-i512:512-i1024:1024-i2048:2048-i4096:4096-n8:16:32:64-S128-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
 target triple = "fpga64-xilinx-none"
@@ -27,9 +27,9 @@ entry:
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_in([28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias readonly, [28 x [28 x i16]]* noalias align 512, [1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* noalias readonly, [1 x [5 x [5 x i16]]]* noalias align 512, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias readonly, [144 x [10 x i16]]* noalias align 512, [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* noalias readonly, [10 x i16]* noalias align 512) unnamed_addr #1 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0a28a28struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.55"([28 x [28 x i16]]* align 512 %1, [28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %0)
+  call fastcc void @"onebyonecpy_hls.p0a28a28struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.49"([28 x [28 x i16]]* align 512 %1, [28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %0)
   call fastcc void @"onebyonecpy_hls.p0a1a5a5struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"([1 x [5 x [5 x i16]]]* align 512 %3, [1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* %2)
-  call fastcc void @"onebyonecpy_hls.p0a144a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.41"([144 x [10 x i16]]* align 512 %5, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %4)
+  call fastcc void @"onebyonecpy_hls.p0a144a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.35"([144 x [10 x i16]]* align 512 %5, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %4)
   call fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"([10 x i16]* align 512 %7, [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* %6)
   ret void
 }
@@ -165,14 +165,14 @@ ret:                                              ; preds = %for.loop, %entry
 define internal fastcc void @copy_out([28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias, [28 x [28 x i16]]* noalias readonly align 512, [1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* noalias, [1 x [5 x [5 x i16]]]* noalias readonly align 512, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias, [144 x [10 x i16]]* noalias readonly align 512, [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* noalias, [10 x i16]* noalias readonly align 512) unnamed_addr #3 {
 entry:
   call fastcc void @"onebyonecpy_hls.p0a28a28struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"([28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %0, [28 x [28 x i16]]* align 512 %1)
-  call fastcc void @"onebyonecpy_hls.p0a1a5a5struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.49"([1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* %2, [1 x [5 x [5 x i16]]]* align 512 %3)
+  call fastcc void @"onebyonecpy_hls.p0a1a5a5struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.43"([1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* %2, [1 x [5 x [5 x i16]]]* align 512 %3)
   call fastcc void @"onebyonecpy_hls.p0a144a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"([144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %4, [144 x [10 x i16]]* align 512 %5)
-  call fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.35"([10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* %6, [10 x i16]* align 512 %7)
+  call fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.29"([10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* %6, [10 x i16]* align 512 %7)
   ret void
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.35"([10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* noalias, [10 x i16]* noalias readonly align 512) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.29"([10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* noalias, [10 x i16]* noalias readonly align 512) unnamed_addr #2 {
 entry:
   %2 = icmp eq [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* %0, null
   %3 = icmp eq [10 x i16]* %1, null
@@ -197,7 +197,7 @@ ret:                                              ; preds = %for.loop, %entry
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @"onebyonecpy_hls.p0a144a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.41"([144 x [10 x i16]]* noalias align 512, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0a144a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.35"([144 x [10 x i16]]* noalias align 512, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias readonly) unnamed_addr #2 {
 entry:
   %2 = icmp eq [144 x [10 x i16]]* %0, null
   %3 = icmp eq [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %1, null
@@ -231,7 +231,7 @@ ret:                                              ; preds = %for.loop.split, %en
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @"onebyonecpy_hls.p0a1a5a5struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.49"([1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* noalias, [1 x [5 x [5 x i16]]]* noalias readonly align 512) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0a1a5a5struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.43"([1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* noalias, [1 x [5 x [5 x i16]]]* noalias readonly align 512) unnamed_addr #2 {
 entry:
   %2 = icmp eq [1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* %0, null
   %3 = icmp eq [1 x [5 x [5 x i16]]]* %1, null
@@ -265,7 +265,7 @@ ret:                                              ; preds = %for.loop2.split, %e
 }
 
 ; Function Attrs: argmemonly noinline norecurse
-define internal fastcc void @"onebyonecpy_hls.p0a28a28struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.55"([28 x [28 x i16]]* noalias align 512, [28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias readonly) unnamed_addr #2 {
+define internal fastcc void @"onebyonecpy_hls.p0a28a28struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.49"([28 x [28 x i16]]* noalias align 512, [28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias readonly) unnamed_addr #2 {
 entry:
   %2 = icmp eq [28 x [28 x i16]]* %0, null
   %3 = icmp eq [28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* %1, null
@@ -303,7 +303,7 @@ declare void @apatb_tiled_conv_hw([28 x [28 x i16]]*, [1 x [5 x [5 x i16]]]*, [1
 ; Function Attrs: argmemonly noinline norecurse
 define internal fastcc void @copy_back([28 x [28 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias, [28 x [28 x i16]]* noalias readonly align 512, [1 x [5 x [5 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]]* noalias, [1 x [5 x [5 x i16]]]* noalias readonly align 512, [144 x [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]]* noalias, [144 x [10 x i16]]* noalias readonly align 512, [10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* noalias, [10 x i16]* noalias readonly align 512) unnamed_addr #3 {
 entry:
-  call fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.35"([10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* %6, [10 x i16]* align 512 %7)
+  call fastcc void @"onebyonecpy_hls.p0a10struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>.29"([10 x %"struct.ap_fixed<16, 3, AP_TRN, AP_WRAP, 0>"]* %6, [10 x i16]* align 512 %7)
   ret void
 }
 

@@ -6,6 +6,9 @@
 //              for a single tile block without any optimizations
 ///////////////////////////////////////////////////////////////////////////////
 #include "utils.h"
+#include <iostream>
+
+using namespace std;
 
 /*void conv_7x7(
     fm_t Y_buf[OUT_BUF_DEPTH][OUT_BUF_HEIGHT][OUT_BUF_WIDTH], 
@@ -53,6 +56,7 @@ void conv_5x5(
 
                 // ReLU in-place
                 Y_buf[feature][i][j] = (tmp > 0) ? (tmp) : (fm_t) 0;
+//		cout<< Y_buf[feature][i][j]<<std::endl;
             }
         }
     }
@@ -77,6 +81,7 @@ void max_pool(
                     }
                 }
                 max_pool_out_buf[depth][i][j] = max;
+		//cout<<max_pool_out_buf[depth][i][j]<<endl;
             }
         }
     }
@@ -95,6 +100,7 @@ void quarter_drop(
                 if (!(rand_no % 4)) {
                     max_pool_out_buf[depth][i][j] = 0;
                 }
+		//cout<<max_pool_out_buf[depth][i][j]<<endl;
             }
         }
     }

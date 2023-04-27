@@ -6,7 +6,7 @@
           "label": "",
           "functionLabel": "",
           "id": "1",
-          "sourceFile": "\/nethome\/djohri7\/FPGA\/Final_Project\/bkup\/script.tcl",
+          "sourceFile": "\/nethome\/djohri7\/FPGA\/Final_Project\/script.tcl",
           "sourceLine": "25",
           "pragma": {
             "name": "TOP",
@@ -21,7 +21,7 @@
           "label": "",
           "functionLabel": "",
           "id": "2",
-          "sourceFile": "\/nethome\/djohri7\/FPGA\/Final_Project\/bkup\/script.tcl",
+          "sourceFile": "\/nethome\/djohri7\/FPGA\/Final_Project\/script.tcl",
           "sourceLine": "25",
           "pragma": {
             "name": "TOP",
@@ -36,7 +36,7 @@
           "label": "",
           "functionLabel": "",
           "id": "3",
-          "sourceFile": "\/nethome\/djohri7\/FPGA\/Final_Project\/bkup\/script.tcl",
+          "sourceFile": "\/nethome\/djohri7\/FPGA\/Final_Project\/script.tcl",
           "sourceLine": "25",
           "pragma": {
             "name": "TOP",

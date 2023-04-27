@@ -7,6 +7,8 @@
 #include "conv.h"
 #include "utils.h"
 
+#include <typeinfo>
+
 using namespace std;
 
 //--------------------------------------------------------------------------
@@ -90,8 +92,13 @@ int main ()
     // Call kernel function here
     tiled_conv(input_feature_map, conv_layer_weights, fc_params, output_feature_map);
 
-    std::cout << " Inference completed! " << std::endl;
+    //#ifdef CSIM_DEBUG
+    for(int i=0; i<OUT_LINEAR_LENGTH; i++)
+	    cout<<typeid(output_feature_map[i]).name()<<"\t"<<output_feature_map[i]<<std::endl;
 
+    //#endif    
+    std::cout << " Inference completed! " << std::endl;
+    
     system("pause");
 
     return 0;

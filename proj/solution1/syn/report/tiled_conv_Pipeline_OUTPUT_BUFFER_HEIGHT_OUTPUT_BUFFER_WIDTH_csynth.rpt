@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'tiled_conv_Pipeline_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH'
 ================================================================
-* Date:           Tue Apr 18 17:01:46 2023
+* Date:           Thu Apr 27 10:52:42 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        proj
@@ -85,19 +85,19 @@
     +--------------------------+----------+----+---+----+------------+------------+
     |       Variable Name      | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
     +--------------------------+----------+----+---+----+------------+------------+
-    |add_ln187_1_fu_204_p2     |         +|   0|  0|  13|           4|           4|
-    |add_ln187_2_fu_127_p2     |         +|   0|  0|  13|           4|           1|
-    |add_ln187_fu_139_p2       |         +|   0|  0|  10|           2|           1|
-    |add_ln190_fu_167_p2       |         +|   0|  0|  10|           2|           1|
-    |add_ln201_1_fu_238_p2     |         +|   0|  0|   7|           4|           4|
-    |add_ln201_2_fu_261_p2     |         +|   0|  0|   8|           8|           8|
-    |add_ln201_fu_252_p2       |         +|   0|  0|  13|           5|           5|
-    |sub_ln201_1_fu_229_p2     |         -|   0|  0|   8|           8|           8|
-    |sub_ln201_fu_198_p2       |         -|   0|  0|   7|           4|           4|
-    |icmp_ln187_fu_121_p2      |      icmp|   0|  0|   9|           4|           4|
-    |icmp_ln190_fu_145_p2      |      icmp|   0|  0|   8|           2|           2|
-    |select_ln187_1_fu_159_p3  |    select|   0|  0|   2|           1|           2|
-    |select_ln187_fu_151_p3    |    select|   0|  0|   2|           1|           1|
+    |add_ln190_1_fu_204_p2     |         +|   0|  0|  13|           4|           4|
+    |add_ln190_2_fu_127_p2     |         +|   0|  0|  13|           4|           1|
+    |add_ln190_fu_139_p2       |         +|   0|  0|  10|           2|           1|
+    |add_ln193_fu_167_p2       |         +|   0|  0|  10|           2|           1|
+    |add_ln204_1_fu_238_p2     |         +|   0|  0|   7|           4|           4|
+    |add_ln204_2_fu_261_p2     |         +|   0|  0|   8|           8|           8|
+    |add_ln204_fu_252_p2       |         +|   0|  0|  13|           5|           5|
+    |sub_ln204_1_fu_229_p2     |         -|   0|  0|   8|           8|           8|
+    |sub_ln204_fu_198_p2       |         -|   0|  0|   7|           4|           4|
+    |icmp_ln190_fu_121_p2      |      icmp|   0|  0|   9|           4|           4|
+    |icmp_ln193_fu_145_p2      |      icmp|   0|  0|   8|           2|           2|
+    |select_ln190_1_fu_159_p3  |    select|   0|  0|   2|           1|           2|
+    |select_ln190_fu_151_p3    |    select|   0|  0|   2|           1|           1|
     |ap_enable_pp0             |       xor|   0|  0|   2|           1|           2|
     +--------------------------+----------+----+---+----+------------+------------+
     |Total                     |          |   0|  0| 112|          50|          47|
@@ -110,10 +110,10 @@
     |ap_done_int                             |   9|          2|    1|          2|
     |ap_enable_reg_pp0_iter1                 |   9|          2|    1|          2|
     |ap_sig_allocacmp_i_load                 |   9|          2|    2|          4|
-    |ap_sig_allocacmp_indvar_flatten38_load  |   9|          2|    4|          8|
+    |ap_sig_allocacmp_indvar_flatten30_load  |   9|          2|    4|          8|
     |ap_sig_allocacmp_j_load                 |   9|          2|    2|          4|
     |i_fu_56                                 |   9|          2|    2|          4|
-    |indvar_flatten38_fu_60                  |   9|          2|    4|          8|
+    |indvar_flatten30_fu_60                  |   9|          2|    4|          8|
     |j_fu_52                                 |   9|          2|    2|          4|
     +----------------------------------------+----+-----------+-----+-----------+
     |Total                                   |  72|         16|   18|         36|
@@ -123,17 +123,17 @@
     +----------------------------------+---+----+-----+-----------+
     |               Name               | FF| LUT| Bits| Const Bits|
     +----------------------------------+---+----+-----+-----------+
-    |add_ln201_2_reg_323               |  8|   0|    8|          0|
+    |add_ln204_2_reg_323               |  8|   0|    8|          0|
     |ap_CS_fsm                         |  1|   0|    1|          0|
     |ap_done_reg                       |  1|   0|    1|          0|
     |ap_enable_reg_pp0_iter1           |  1|   0|    1|          0|
     |ap_enable_reg_pp0_iter2           |  1|   0|    1|          0|
     |ap_loop_exit_ready_pp0_iter1_reg  |  1|   0|    1|          0|
     |i_fu_56                           |  2|   0|    2|          0|
-    |indvar_flatten38_fu_60            |  4|   0|    4|          0|
+    |indvar_flatten30_fu_60            |  4|   0|    4|          0|
     |j_fu_52                           |  2|   0|    2|          0|
-    |select_ln187_1_reg_312            |  2|   0|    2|          0|
-    |select_ln187_reg_306              |  2|   0|    2|          0|
+    |select_ln190_1_reg_312            |  2|   0|    2|          0|
+    |select_ln190_reg_306              |  2|   0|    2|          0|
     +----------------------------------+---+----+-----+-----------+
     |Total                             | 25|   0|   25|          0|
     +----------------------------------+---+----+-----+-----------+
@@ -153,14 +153,14 @@
 |ap_done                        |  out|    1|  ap_ctrl_hs|  tiled_conv_Pipeline_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH|  return value|
 |ap_idle                        |  out|    1|  ap_ctrl_hs|  tiled_conv_Pipeline_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH|  return value|
 |ap_ready                       |  out|    1|  ap_ctrl_hs|  tiled_conv_Pipeline_OUTPUT_BUFFER_HEIGHT_OUTPUT_BUFFER_WIDTH|  return value|
-|trunc_ln38_2                   |   in|    4|     ap_none|                                                  trunc_ln38_2|        scalar|
+|trunc_ln41_2                   |   in|    4|     ap_none|                                                  trunc_ln41_2|        scalar|
 |max_pool_out_buf_V_0_address0  |  out|    4|   ap_memory|                                          max_pool_out_buf_V_0|         array|
 |max_pool_out_buf_V_0_ce0       |  out|    1|   ap_memory|                                          max_pool_out_buf_V_0|         array|
 |max_pool_out_buf_V_0_q0        |   in|   15|   ap_memory|                                          max_pool_out_buf_V_0|         array|
-|sub_ln181                      |   in|    5|     ap_none|                                                     sub_ln181|        scalar|
-|layer1_output_V_address0       |  out|    8|   ap_memory|                                               layer1_output_V|         array|
-|layer1_output_V_ce0            |  out|    1|   ap_memory|                                               layer1_output_V|         array|
-|layer1_output_V_we0            |  out|    1|   ap_memory|                                               layer1_output_V|         array|
-|layer1_output_V_d0             |  out|   15|   ap_memory|                                               layer1_output_V|         array|
+|sub_ln184                      |   in|    5|     ap_none|                                                     sub_ln184|        scalar|
+|layer1_output_V_0_address0     |  out|    8|   ap_memory|                                             layer1_output_V_0|         array|
+|layer1_output_V_0_ce0          |  out|    1|   ap_memory|                                             layer1_output_V_0|         array|
+|layer1_output_V_0_we0          |  out|    1|   ap_memory|                                             layer1_output_V_0|         array|
+|layer1_output_V_0_d0           |  out|   15|   ap_memory|                                             layer1_output_V_0|         array|
 +-------------------------------+-----+-----+------------+--------------------------------------------------------------+--------------+
 

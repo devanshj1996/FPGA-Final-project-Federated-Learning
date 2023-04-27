@@ -9,6 +9,9 @@
 //              for your implementation.
 ///////////////////////////////////////////////////////////////////////////////
 #include "utils.h"
+#include <iostream>
+
+using namespace std;
 
 //--------------------------------------------------------------------------
 // Function to load an input tile block from from off-chip DRAM 
@@ -199,7 +202,8 @@ OUTPUT_BUFFER_DEPTH:
                     out_fm[depth_offset + f][height_offset + i][width_offset + j] = out_fm_buf[f][i][j];
                 }*/
                 conv_out_fm[depth_offset + f][height_offset + i][width_offset + j] = out_fm_buf[f][i][j];
-            }
+            	//cout<<conv_out_fm[depth_offset + f][height_offset + i][width_offset + j]<<endl;
+	    }
         }
     }
 }

@@ -3,7 +3,7 @@
 ================================================================
 == Vitis HLS Report for 'tiled_conv_Pipeline_WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH'
 ================================================================
-* Date:           Tue Apr 18 17:01:40 2023
+* Date:           Thu Apr 27 10:52:37 2023
 
 * Version:        2022.1.2 (Build 3605665 on Fri Aug  5 22:52:02 MDT 2022)
 * Project:        proj
@@ -89,49 +89,49 @@ State 1 <SV = 0> <Delay = 3.36>
 ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%kw = alloca i32 1"   --->   Operation 6 'alloca' 'kw' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%kh = alloca i32 1"   --->   Operation 7 'alloca' 'kh' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%indvar_flatten6 = alloca i32 1"   --->   Operation 8 'alloca' 'indvar_flatten6' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln115_read = read i63 @_ssdm_op_Read.ap_auto.i63, i63 %sext_ln115"   --->   Operation 9 'read' 'sext_ln115_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln115_cast = sext i63 %sext_ln115_read"   --->   Operation 10 'sext' 'sext_ln115_cast' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_15, i32 0, i32 0, void @empty_19, i32 0, i32 1, void @empty_22, void @empty_21, void @empty_19, i32 16, i32 16, i32 16, i32 16, void @empty_19, void @empty_19, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%sext_ln118_read = read i63 @_ssdm_op_Read.ap_auto.i63, i63 %sext_ln118"   --->   Operation 9 'read' 'sext_ln118_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%sext_ln118_cast = sext i63 %sext_ln118_read"   --->   Operation 10 'sext' 'sext_ln118_cast' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i16 %wt, void @empty_8, i32 0, i32 0, void @empty_17, i32 0, i32 1, void @empty_6, void @empty, void @empty_17, i32 16, i32 16, i32 16, i32 16, void @empty_17, void @empty_17, i32 4294967295, i32 0"   --->   Operation 11 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 12 [1/1] (1.58ns)   --->   "%store_ln0 = store i5 0, i5 %indvar_flatten6"   --->   Operation 12 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 13 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %kh"   --->   Operation 13 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
 ST_1 : Operation 14 [1/1] (1.58ns)   --->   "%store_ln0 = store i3 0, i3 %kw"   --->   Operation 14 'store' 'store_ln0' <Predicate = true> <Delay = 1.58>
-ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i88"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%indvar_flatten6_load = load i5 %indvar_flatten6" [utils.cpp:115]   --->   Operation 16 'load' 'indvar_flatten6_load' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln0 = br void %for.inc.i86"   --->   Operation 15 'br' 'br_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%indvar_flatten6_load = load i5 %indvar_flatten6" [utils.cpp:118]   --->   Operation 16 'load' 'indvar_flatten6_load' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%specbitsmap_ln0 = specbitsmap void @_ssdm_op_SpecBitsMap, i16 %wt"   --->   Operation 17 'specbitsmap' 'specbitsmap_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%wt_addr = getelementptr i16 %wt, i64 %sext_ln115_cast" [utils.cpp:115]   --->   Operation 18 'getelementptr' 'wt_addr' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%wt_addr = getelementptr i16 %wt, i64 %sext_ln118_cast" [utils.cpp:118]   --->   Operation 18 'getelementptr' 'wt_addr' <Predicate = true> <Delay = 0.00>
 ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 19 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 20 [1/1] (1.36ns)   --->   "%icmp_ln115 = icmp_eq  i5 %indvar_flatten6_load, i5 25" [utils.cpp:115]   --->   Operation 20 'icmp' 'icmp_ln115' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 21 [1/1] (1.78ns)   --->   "%add_ln115_1 = add i5 %indvar_flatten6_load, i5 1" [utils.cpp:115]   --->   Operation 21 'add' 'add_ln115_1' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln115 = br i1 %icmp_ln115, void %for.inc27.i, void %VITIS_LOOP_39_3.i.preheader.exitStub" [utils.cpp:115]   --->   Operation 22 'br' 'br_ln115' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%store_ln118 = store i5 %add_ln115_1, i5 %indvar_flatten6" [utils.cpp:118]   --->   Operation 23 'store' 'store_ln118' <Predicate = (!icmp_ln115)> <Delay = 1.58>
+ST_1 : Operation 20 [1/1] (1.36ns)   --->   "%icmp_ln118 = icmp_eq  i5 %indvar_flatten6_load, i5 25" [utils.cpp:118]   --->   Operation 20 'icmp' 'icmp_ln118' <Predicate = true> <Delay = 1.36> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.36> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 21 [1/1] (1.78ns)   --->   "%add_ln118_1 = add i5 %indvar_flatten6_load, i5 1" [utils.cpp:118]   --->   Operation 21 'add' 'add_ln118_1' <Predicate = true> <Delay = 1.78> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%br_ln118 = br i1 %icmp_ln118, void %for.inc27.i, void %VITIS_LOOP_42_3.i.preheader.exitStub" [utils.cpp:118]   --->   Operation 22 'br' 'br_ln118' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (1.58ns)   --->   "%store_ln121 = store i5 %add_ln118_1, i5 %indvar_flatten6" [utils.cpp:121]   --->   Operation 23 'store' 'store_ln121' <Predicate = (!icmp_ln118)> <Delay = 1.58>
 
 State 2 <SV = 1> <Delay = 7.30>
-ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%kw_load = load i3 %kw" [utils.cpp:118]   --->   Operation 24 'load' 'kw_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%kh_load = load i3 %kh" [utils.cpp:115]   --->   Operation 25 'load' 'kh_load' <Predicate = true> <Delay = 0.00>
-ST_2 : Operation 26 [1/1] (1.65ns)   --->   "%add_ln115 = add i3 %kh_load, i3 1" [utils.cpp:115]   --->   Operation 26 'add' 'add_ln115' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 27 [1/1] (1.13ns)   --->   "%icmp_ln118 = icmp_eq  i3 %kw_load, i3 5" [utils.cpp:118]   --->   Operation 27 'icmp' 'icmp_ln118' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 28 [1/1] (0.98ns)   --->   "%select_ln115 = select i1 %icmp_ln118, i3 0, i3 %kw_load" [utils.cpp:115]   --->   Operation 28 'select' 'select_ln115' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 29 [1/1] (0.98ns)   --->   "%select_ln115_1 = select i1 %icmp_ln118, i3 %add_ln115, i3 %kh_load" [utils.cpp:115]   --->   Operation 29 'select' 'select_ln115_1' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_2 : Operation 30 [1/1] (7.30ns)   --->   "%wt_addr_read = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %wt_addr" [utils.cpp:120]   --->   Operation 30 'read' 'wt_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
-ST_2 : Operation 31 [1/1] (1.65ns)   --->   "%add_ln118 = add i3 %select_ln115, i3 1" [utils.cpp:118]   --->   Operation 31 'add' 'add_ln118' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln118 = store i3 %select_ln115_1, i3 %kh" [utils.cpp:118]   --->   Operation 32 'store' 'store_ln118' <Predicate = true> <Delay = 1.58>
-ST_2 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln118 = store i3 %add_ln118, i3 %kw" [utils.cpp:118]   --->   Operation 33 'store' 'store_ln118' <Predicate = true> <Delay = 1.58>
-ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 47 'ret' 'ret_ln0' <Predicate = (icmp_ln115)> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%kw_load = load i3 %kw" [utils.cpp:121]   --->   Operation 24 'load' 'kw_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%kh_load = load i3 %kh" [utils.cpp:118]   --->   Operation 25 'load' 'kh_load' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (1.65ns)   --->   "%add_ln118 = add i3 %kh_load, i3 1" [utils.cpp:118]   --->   Operation 26 'add' 'add_ln118' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 27 [1/1] (1.13ns)   --->   "%icmp_ln121 = icmp_eq  i3 %kw_load, i3 5" [utils.cpp:121]   --->   Operation 27 'icmp' 'icmp_ln121' <Predicate = true> <Delay = 1.13> <CoreInst = "Cmp">   --->   Core 9 'Cmp' <Latency = 0> <II = 1> <Delay = 1.13> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 28 [1/1] (0.98ns)   --->   "%select_ln118 = select i1 %icmp_ln121, i3 0, i3 %kw_load" [utils.cpp:118]   --->   Operation 28 'select' 'select_ln118' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 29 [1/1] (0.98ns)   --->   "%select_ln118_1 = select i1 %icmp_ln121, i3 %add_ln118, i3 %kh_load" [utils.cpp:118]   --->   Operation 29 'select' 'select_ln118_1' <Predicate = true> <Delay = 0.98> <CoreInst = "Sel">   --->   Core 73 'Sel' <Latency = 0> <II = 1> <Delay = 0.98> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_2 : Operation 30 [1/1] (7.30ns)   --->   "%wt_addr_read = read i16 @_ssdm_op_Read.m_axi.p1i16, i16 %wt_addr" [utils.cpp:123]   --->   Operation 30 'read' 'wt_addr_read' <Predicate = true> <Delay = 7.30> <CoreInst = "m_axi">   --->   Core 113 'm_axi' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : 'read' 'write' 'readreq' 'writereq' 'writeresp'>
+ST_2 : Operation 31 [1/1] (1.65ns)   --->   "%add_ln121 = add i3 %select_ln118, i3 1" [utils.cpp:121]   --->   Operation 31 'add' 'add_ln121' <Predicate = true> <Delay = 1.65> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 1.65> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 32 [1/1] (1.58ns)   --->   "%store_ln121 = store i3 %select_ln118_1, i3 %kh" [utils.cpp:121]   --->   Operation 32 'store' 'store_ln121' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 33 [1/1] (1.58ns)   --->   "%store_ln121 = store i3 %add_ln121, i3 %kw" [utils.cpp:121]   --->   Operation 33 'store' 'store_ln121' <Predicate = true> <Delay = 1.58>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%ret_ln0 = ret"   --->   Operation 47 'ret' 'ret_ln0' <Predicate = (icmp_ln118)> <Delay = 0.00>
 
 State 3 <SV = 2> <Delay = 5.72>
 ST_3 : Operation 34 [1/1] (0.00ns)   --->   "%specloopname_ln0 = specloopname void @_ssdm_op_SpecLoopName, void @WEIGHT_KERNEL_HEIGHT_WEIGHT_KERNEL_WIDTH_str"   --->   Operation 34 'specloopname' 'specloopname_ln0' <Predicate = true> <Delay = 0.00>
 ST_3 : Operation 35 [1/1] (0.00ns)   --->   "%empty = speclooptripcount i32 @_ssdm_op_SpecLoopTripCount, i64 25, i64 25, i64 25"   --->   Operation 35 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln120 = zext i3 %select_ln115_1" [utils.cpp:120]   --->   Operation 36 'zext' 'zext_ln120' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %select_ln115_1, i2 0" [utils.cpp:120]   --->   Operation 37 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 38 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln120 = add i5 %tmp_s, i5 %zext_ln120" [utils.cpp:120]   --->   Operation 38 'add' 'add_ln120' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 36 [1/1] (0.00ns)   --->   "%zext_ln123 = zext i3 %select_ln118_1" [utils.cpp:123]   --->   Operation 36 'zext' 'zext_ln123' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 37 [1/1] (0.00ns)   --->   "%tmp_s = bitconcatenate i5 @_ssdm_op_BitConcatenate.i5.i3.i2, i3 %select_ln118_1, i2 0" [utils.cpp:123]   --->   Operation 37 'bitconcatenate' 'tmp_s' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 38 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%add_ln123 = add i5 %tmp_s, i5 %zext_ln123" [utils.cpp:123]   --->   Operation 38 'add' 'add_ln123' <Predicate = true> <Delay = 0.00> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 ST_3 : Operation 39 [1/1] (0.00ns)   --->   "%specpipeline_ln0 = specpipeline void @_ssdm_op_SpecPipeline, i32 4294967295, i32 0, i32 1, i32 0, void @p_str"   --->   Operation 39 'specpipeline' 'specpipeline_ln0' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln120_1 = zext i3 %select_ln115" [utils.cpp:120]   --->   Operation 40 'zext' 'zext_ln120_1' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 41 [1/1] (3.40ns) (root node of TernaryAdder)   --->   "%add_ln120_1 = add i5 %add_ln120, i5 %zext_ln120_1" [utils.cpp:120]   --->   Operation 41 'add' 'add_ln120_1' <Predicate = true> <Delay = 3.40> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln120_2 = zext i5 %add_ln120_1" [utils.cpp:120]   --->   Operation 42 'zext' 'zext_ln120_2' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%conv_wt_buf_V_0_0_addr = getelementptr i16 %conv_wt_buf_V_0_0, i64 0, i64 %zext_ln120_2" [utils.cpp:120]   --->   Operation 43 'getelementptr' 'conv_wt_buf_V_0_0_addr' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specloopname_ln118 = specloopname void @_ssdm_op_SpecLoopName, void @empty_14" [utils.cpp:118]   --->   Operation 44 'specloopname' 'specloopname_ln118' <Predicate = true> <Delay = 0.00>
-ST_3 : Operation 45 [1/1] (2.32ns)   --->   "%store_ln120 = store i16 %wt_addr_read, i5 %conv_wt_buf_V_0_0_addr" [utils.cpp:120]   --->   Operation 45 'store' 'store_ln120' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 25> <RAM>
-ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln118 = br void %for.inc.i88" [utils.cpp:118]   --->   Operation 46 'br' 'br_ln118' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 40 [1/1] (0.00ns)   --->   "%zext_ln123_1 = zext i3 %select_ln118" [utils.cpp:123]   --->   Operation 40 'zext' 'zext_ln123_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 41 [1/1] (3.40ns) (root node of TernaryAdder)   --->   "%add_ln123_1 = add i5 %add_ln123, i5 %zext_ln123_1" [utils.cpp:123]   --->   Operation 41 'add' 'add_ln123_1' <Predicate = true> <Delay = 3.40> <CoreInst = "TAddSub">   --->   Core 10 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.70> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
+ST_3 : Operation 42 [1/1] (0.00ns)   --->   "%zext_ln123_2 = zext i5 %add_ln123_1" [utils.cpp:123]   --->   Operation 42 'zext' 'zext_ln123_2' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 43 [1/1] (0.00ns)   --->   "%conv_wt_buf_V_0_0_addr = getelementptr i16 %conv_wt_buf_V_0_0, i64 0, i64 %zext_ln123_2" [utils.cpp:123]   --->   Operation 43 'getelementptr' 'conv_wt_buf_V_0_0_addr' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 44 [1/1] (0.00ns)   --->   "%specloopname_ln121 = specloopname void @_ssdm_op_SpecLoopName, void @empty_16" [utils.cpp:121]   --->   Operation 44 'specloopname' 'specloopname_ln121' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 45 [1/1] (2.32ns)   --->   "%store_ln123 = store i16 %wt_addr_read, i5 %conv_wt_buf_V_0_0_addr" [utils.cpp:123]   --->   Operation 45 'store' 'store_ln123' <Predicate = true> <Delay = 2.32> <CoreInst = "RAM">   --->   Core 82 'RAM' <Latency = 1> <II = 1> <Delay = 2.32> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 16> <Depth = 25> <RAM>
+ST_3 : Operation 46 [1/1] (0.00ns)   --->   "%br_ln121 = br void %for.inc.i86" [utils.cpp:121]   --->   Operation 46 'br' 'br_ln121' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -142,20 +142,20 @@ Target clock period: 10ns, clock uncertainty: 2.7ns.
  <State 1>: 3.37ns
 The critical path consists of the following:
 	'alloca' operation ('indvar_flatten6') [6]  (0 ns)
-	'load' operation ('indvar_flatten6_load', utils.cpp:115) on local variable 'indvar_flatten6' [15]  (0 ns)
-	'add' operation ('add_ln115_1', utils.cpp:115) [20]  (1.78 ns)
-	'store' operation ('store_ln118', utils.cpp:118) of variable 'add_ln115_1', utils.cpp:115 on local variable 'indvar_flatten6' [43]  (1.59 ns)
+	'load' operation ('indvar_flatten6_load', utils.cpp:118) on local variable 'indvar_flatten6' [15]  (0 ns)
+	'add' operation ('add_ln118_1', utils.cpp:118) [20]  (1.78 ns)
+	'store' operation ('store_ln121', utils.cpp:121) of variable 'add_ln118_1', utils.cpp:118 on local variable 'indvar_flatten6' [43]  (1.59 ns)
 
  <State 2>: 7.3ns
 The critical path consists of the following:
-	bus read operation ('wt_addr_read', utils.cpp:120) on port 'wt' (utils.cpp:120) [40]  (7.3 ns)
+	bus read operation ('wt_addr_read', utils.cpp:123) on port 'wt' (utils.cpp:123) [40]  (7.3 ns)
 
  <State 3>: 5.73ns
 The critical path consists of the following:
-	'add' operation ('add_ln120', utils.cpp:120) [33]  (0 ns)
-	'add' operation ('add_ln120_1', utils.cpp:120) [36]  (3.4 ns)
-	'getelementptr' operation ('conv_wt_buf_V_0_0_addr', utils.cpp:120) [38]  (0 ns)
-	'store' operation ('store_ln120', utils.cpp:120) of variable 'wt_addr_read', utils.cpp:120 on array 'conv_wt_buf_V_0_0' [41]  (2.32 ns)
+	'add' operation ('add_ln123', utils.cpp:123) [33]  (0 ns)
+	'add' operation ('add_ln123_1', utils.cpp:123) [36]  (3.4 ns)
+	'getelementptr' operation ('conv_wt_buf_V_0_0_addr', utils.cpp:123) [38]  (0 ns)
+	'store' operation ('store_ln123', utils.cpp:123) of variable 'wt_addr_read', utils.cpp:123 on array 'conv_wt_buf_V_0_0' [41]  (2.32 ns)
 
 
 ============================================================

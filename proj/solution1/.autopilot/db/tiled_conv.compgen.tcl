@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 83
+set ID 81
 set hasByteEnable 0
 set MemName tiled_conv_conv_in_buf_V_0_RAM_1WNR_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -80,7 +80,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 84
+set ID 82
 set hasByteEnable 0
 set MemName tiled_conv_conv_wt_buf_V_0_0_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -159,7 +159,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 85
+set ID 83
 set hasByteEnable 0
 set MemName tiled_conv_conv_out_buf_V_0_RAM_1WNR_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -238,7 +238,7 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 86
+set ID 84
 set hasByteEnable 0
 set MemName tiled_conv_max_pool_out_buf_V_0_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
@@ -317,9 +317,9 @@ if {[info proc ::AESL_LIB_VIRTEX::xil_gen_RAM] == "::AESL_LIB_VIRTEX::xil_gen_RA
 
 
 # Memory (RAM/ROM)  definition:
-set ID 87
+set ID 85
 set hasByteEnable 0
-set MemName tiled_conv_layer1_output_V_RAM_AUTO_1R1W
+set MemName tiled_conv_layer1_output_V_0_RAM_AUTO_1R1W
 set CoreName ap_simcore_mem
 set PortList { 2 3 }
 set DataWd 15
@@ -462,7 +462,7 @@ dict set axilite_register_dict control $port_control
 if {${::AESL::PGuard_simmodel_gen}} {
 	if {[info proc ::AESL_LIB_XILADAPTER::s_axilite_gen] == "::AESL_LIB_XILADAPTER::s_axilite_gen"} {
 		eval "::AESL_LIB_XILADAPTER::s_axilite_gen { \
-			id 88 \
+			id 86 \
 			corename tiled_conv_control_axilite \
 			name tiled_conv_control_s_axi \
 			ports {$port_control} \

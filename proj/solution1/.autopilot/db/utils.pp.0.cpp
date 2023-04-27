@@ -33812,12 +33812,8 @@ void linear_layer(
 # 12 "utils.cpp" 2
 
 
-
-
-
-
-
-
+using namespace std;
+# 23 "utils.cpp"
 void load_input_tile_block_from_DRAM (
     fm_t in_fm_buf[1][6 + 4][6 + 4],
     fm_t in_fm[1][28][28],
@@ -33855,7 +33851,7 @@ void load_input_tile_block_from_DRAM (
         }
     }
 }
-# 100 "utils.cpp"
+# 103 "utils.cpp"
 void load_layer_params_from_DRAM(
     wt_t weight_buf[1][1][5][5],
     wt_t weights[1][1][5][5],
@@ -33882,7 +33878,7 @@ WEIGHT_KERNEL_NUM:
         }
     }
 }
-# 171 "utils.cpp"
+# 174 "utils.cpp"
 void store_output_tile_to_DRAM(
     fm_t conv_out_fm[1][12][12],
     fm_t out_fm_buf[1][3][3],
@@ -33904,9 +33900,10 @@ OUTPUT_BUFFER_DEPTH:
         OUTPUT_BUFFER_WIDTH:
             for (int j = 0; j < 3; j++)
             {
-# 201 "utils.cpp"
+# 204 "utils.cpp"
                 conv_out_fm[depth_offset + f][height_offset + i][width_offset + j] = out_fm_buf[f][i][j];
-            }
+
+     }
         }
     }
 }

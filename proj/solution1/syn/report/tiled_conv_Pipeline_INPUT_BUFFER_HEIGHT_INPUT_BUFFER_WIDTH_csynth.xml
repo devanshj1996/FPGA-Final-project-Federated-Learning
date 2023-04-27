@@ -712,8 +712,8 @@
 <Attribute>data</Attribute>
 </RtlPorts>
 <RtlPorts>
-<name>sext_ln36</name>
-<Object>sext_ln36</Object>
+<name>sext_ln39</name>
+<Object>sext_ln39</Object>
 <Type>scalar</Type>
 <Scope></Scope>
 <IOProtocol>ap_none</IOProtocol>

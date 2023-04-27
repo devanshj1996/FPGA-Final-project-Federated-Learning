@@ -18,7 +18,7 @@ set C_modelArgList {
 	{ trunc_ln2 int 3 regular  }
 	{ conv_in_buf_V_0 int 16 regular {array 100 { 0 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 } 0 1 }  }
 	{ trunc_ln4 int 3 regular  }
-	{ sext_ln36 int 6 regular  }
+	{ sext_ln39 int 6 regular  }
 	{ input_feature_map int 64 regular  }
 }
 set C_modelArgMapList {[ 
@@ -27,7 +27,7 @@ set C_modelArgMapList {[
  	{ "Name" : "trunc_ln2", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
  	{ "Name" : "conv_in_buf_V_0", "interface" : "memory", "bitwidth" : 16, "direction" : "WRITEONLY"} , 
  	{ "Name" : "trunc_ln4", "interface" : "wire", "bitwidth" : 3, "direction" : "READONLY"} , 
- 	{ "Name" : "sext_ln36", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
+ 	{ "Name" : "sext_ln39", "interface" : "wire", "bitwidth" : 6, "direction" : "READONLY"} , 
  	{ "Name" : "input_feature_map", "interface" : "wire", "bitwidth" : 64, "direction" : "READONLY"} ]}
 # RTL Port declarations: 
 set portNum 61
@@ -91,7 +91,7 @@ set portList {
 	{ conv_in_buf_V_0_we0 sc_out sc_logic 1 signal 3 } 
 	{ conv_in_buf_V_0_d0 sc_out sc_lv 16 signal 3 } 
 	{ trunc_ln4 sc_in sc_lv 3 signal 4 } 
-	{ sext_ln36 sc_in sc_lv 6 signal 5 } 
+	{ sext_ln39 sc_in sc_lv 6 signal 5 } 
 	{ input_feature_map sc_in sc_lv 64 signal 6 } 
 }
 set NewPortList {[ 
@@ -154,7 +154,7 @@ set NewPortList {[
  	{ "name": "conv_in_buf_V_0_we0", "direction": "out", "datatype": "sc_logic", "bitwidth":1, "type": "signal", "bundle":{"name": "conv_in_buf_V_0", "role": "we0" }} , 
  	{ "name": "conv_in_buf_V_0_d0", "direction": "out", "datatype": "sc_lv", "bitwidth":16, "type": "signal", "bundle":{"name": "conv_in_buf_V_0", "role": "d0" }} , 
  	{ "name": "trunc_ln4", "direction": "in", "datatype": "sc_lv", "bitwidth":3, "type": "signal", "bundle":{"name": "trunc_ln4", "role": "default" }} , 
- 	{ "name": "sext_ln36", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "sext_ln36", "role": "default" }} , 
+ 	{ "name": "sext_ln39", "direction": "in", "datatype": "sc_lv", "bitwidth":6, "type": "signal", "bundle":{"name": "sext_ln39", "role": "default" }} , 
  	{ "name": "input_feature_map", "direction": "in", "datatype": "sc_lv", "bitwidth":64, "type": "signal", "bundle":{"name": "input_feature_map", "role": "default" }}  ]}
 
 set RtlHierarchyInfo {[
@@ -181,7 +181,7 @@ set RtlHierarchyInfo {[
 			{"Name" : "trunc_ln2", "Type" : "None", "Direction" : "I"},
 			{"Name" : "conv_in_buf_V_0", "Type" : "Memory", "Direction" : "O"},
 			{"Name" : "trunc_ln4", "Type" : "None", "Direction" : "I"},
-			{"Name" : "sext_ln36", "Type" : "None", "Direction" : "I"},
+			{"Name" : "sext_ln39", "Type" : "None", "Direction" : "I"},
 			{"Name" : "input_feature_map", "Type" : "None", "Direction" : "I"}],
 		"Loop" : [
 			{"Name" : "INPUT_BUFFER_HEIGHT_INPUT_BUFFER_WIDTH", "PipelineType" : "UPC",
@@ -196,7 +196,7 @@ set ArgLastReadFirstWriteLatency {
 		trunc_ln2 {Type I LastRead 0 FirstWrite -1}
 		conv_in_buf_V_0 {Type O LastRead -1 FirstWrite 10}
 		trunc_ln4 {Type I LastRead 0 FirstWrite -1}
-		sext_ln36 {Type I LastRead 0 FirstWrite -1}
+		sext_ln39 {Type I LastRead 0 FirstWrite -1}
 		input_feature_map {Type I LastRead 0 FirstWrite -1}}}
 
 set hasDtUnsupportedChannel 0
@@ -216,6 +216,6 @@ set Spec2ImplPortList {
 	trunc_ln2 { ap_none {  { trunc_ln2 in_data 0 3 } } }
 	conv_in_buf_V_0 { ap_memory {  { conv_in_buf_V_0_address0 mem_address 1 7 }  { conv_in_buf_V_0_ce0 mem_ce 1 1 }  { conv_in_buf_V_0_we0 mem_we 1 1 }  { conv_in_buf_V_0_d0 mem_din 1 16 } } }
 	trunc_ln4 { ap_none {  { trunc_ln4 in_data 0 3 } } }
-	sext_ln36 { ap_none {  { sext_ln36 in_data 0 6 } } }
+	sext_ln39 { ap_none {  { sext_ln39 in_data 0 6 } } }
 	input_feature_map { ap_none {  { input_feature_map in_data 0 64 } } }
 }
