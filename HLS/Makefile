@@ -33,7 +33,8 @@ IP_DEP+=utils.o
 IP_DEP+=conv_7x7.o
 IP_DEP+=tiled_conv.o
 
-main.o:./inference_testbench_v2.cpp
+#main.o:./inference_testbench_v2.cpp
+main.o:./inference_testbench_v3.cpp
 #main.o:./inference_testbench_v2.cpp
 	$(CC) $(GCOV)  $(CFLAG)  -I "${ASSEMBLE_SRC_ROOT}" -o $@  -c $^   -MMD $(IFLAG)
 
