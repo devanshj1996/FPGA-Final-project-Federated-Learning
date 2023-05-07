@@ -27,7 +27,7 @@
 //--------------------------------------------------------------------------
 // Configuration of ResNet-50's first 7 x 7 convolution layer with HD input 
 //--------------------------------------------------------------------------
-#define SET_SIZE          1
+#define SET_SIZE          2
 #define IN_FM_DEPTH       1             
 #define IN_FM_HEIGHT      28      
 #define IN_FM_WIDTH       28       
